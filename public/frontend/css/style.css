@@ -226,3 +226,32 @@ body .abovefold .card .award {
     line-height: 18px;
     color: #8D8F98;
 }
+
+body .abovefold .card .menu a{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #272829;
+}
+
+body .abovefold .card .menu:hover a {
+    color: #000000;
+    font-size: 15px;
+}
+
+
+
+.slick-slide{
+    transform: scale(0.8);
+    transition: all 0.4s ease-in-out;
+}
+
+.slick-slide img {
+    width: 389px;
+    height: 300px;
+    transition: all 0.4s ease-in-out;
+}
+
+.slick-center {
+    transform: scale(1.1);
+}

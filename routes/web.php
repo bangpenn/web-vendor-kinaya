@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('frontend.home');
 });
 
+Route::get('/testimoni', function () {
+    return view('frontend.testimoni');
+})->name('testimoni');
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

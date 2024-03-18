@@ -56,6 +56,14 @@
                         <button type="button" class="btn btn-card flex-grow-1 me-2">Sign In</button>
                         <button type="button" class="btn btn-card-dark flex-grow-1 ms-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Register</button>
                     </div>
+                    <div class="row mx-0 mt-4 menu">
+                        <div class="col-6 px-0">
+                            <a href="{{ route('testimoni') }}" class="text-decoration-none">
+                                <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/HeaderFinance-1/Vector.png"
+                                alt="vector" class="me-3">Testimoni Vendor
+                            </a>
+                        </div>
+                    </div>
                     <div class="row mx-0 mt-4 award">
                         <div class="col-1 px-0">
                             <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/HeaderFinance-1/award.png"
