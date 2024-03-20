@@ -22,6 +22,11 @@ Route::get('/testimoni', function () {
 })->name('testimoni');
 
 
+Route::get('/why-us', function () {
+    return view('frontend.whyus');
+})->name('why-us');
+
+
 
 Route::middleware([
     'auth:sanctum',

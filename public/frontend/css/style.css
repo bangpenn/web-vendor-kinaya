@@ -176,6 +176,30 @@ body .abovefold .card .input-title {
     margin-bottom: 12px;
 }
 
+.btn-card {
+    background: #DDA226;
+    border-radius: 8px;
+    width: 100px;
+    height: 46px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700 !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-card:hover {
+    background: #FFC62B; 
+    transform: translateY(-2px); 
+}
+
+.btn-card:active {
+    transform: translateY(1px); /* Menekan tombol saat klik */
+    box-shadow: none; /* Menghapus bayangan saat klik */
+}
+
+
+
 body .abovefold .card .btn-card {
     margin-top: 36px;
     background: #DDA226;
@@ -247,8 +271,8 @@ body .abovefold .card .menu:hover a {
 }
 
 .slick-slide img {
-    width: 389px;
-    height: 300px;
+    width: 620px;
+    height: 465px;
     transition: all 0.4s ease-in-out;
 }
 
