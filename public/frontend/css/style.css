@@ -46,6 +46,7 @@ body nav .navbar-brand {
     }
 }
 
+
 body nav .navigation li {
     margin-right: 32px;
 }
@@ -161,6 +162,15 @@ body .abovefold .card {
     }
 }
 
+@media (max-width: 650px) {
+    .four-point {
+        display: none !important; 
+    }
+    .img-home {
+      display: none !important;
+    }
+  }
+
 body .abovefold .card .form-control {
     background: #F8F8FC;
     border-radius: 8px;
@@ -264,18 +274,80 @@ body .abovefold .card .menu:hover a {
 }
 
 
+.grid-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.headline img {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    body .grid-container .headline .text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .modal-xl {
+      width: 90%;
+     max-width:1200px;
+    }
+    .modal-body .row > div {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+}
+  
 
 .slick-slide{
     transform: scale(0.8);
     transition: all 0.4s ease-in-out;
 }
 
-.slick-slide img {
+/* .slick-slide img {
     width: 620px;
     height: 465px;
     transition: all 0.4s ease-in-out;
-}
+} */
 
 .slick-center {
     transform: scale(1.1);
 }
+
+/* Tampilan untuk layar kecil (misalnya, ponsel) */
+@media screen and (max-width: 576px) {
+    .slick-slide img {
+        width: 300px;
+        height: 200px;
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+/* Tampilan untuk layar sedang (misalnya, tablet) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .slick-slide img {
+        width: 620px;
+        height: 465px;
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+/* Tampilan untuk layar besar (misalnya, desktop) */
+@media screen and (min-width: 993px) {
+    .slick-slide img {
+        width: 620px;
+        height: 465px;
+        transition: all 0.4s ease-in-out;
+    }
+}
+

@@ -21,9 +21,18 @@ class PerusahaanDetail extends Model
         'kategori_bidang_perusahaan',
         'kategori_perusahaan',
         'nama_perusahaan',
+        'jumlah_karyawan',
+        'hasil_jadi',
+        'video_perusahaan',
+        'file_katalog',
         'no_telp_perusahaan',
         'email_perusahaan',
+        'sosmed_perusahaan',
         'alamat_perusahaan',
+        'kota',
+        'provinsi',
+        'kode_pos',
+
     ];
 
 

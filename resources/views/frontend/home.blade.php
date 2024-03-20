@@ -25,15 +25,20 @@
     </div>
 </nav>
 
-
     <section class="abovefold overflow-hidden">
     <div class="container position-relative">
         <div class="container header">
             <div class="row">
                 <div class="col-lg-7 px-md-0 my-auto position-relative">
-                    <div class="headline">
-                        Vendor Management Systems <span class="cl-yellow"><br>Kinaya Interior</span>
+                    <div class="grid-container">
+                        <div class="headline">
+                            <img src="{{ asset('frontend/assets/logo kinaya.png') }}" alt="Logo" width="100" height="80" class="d-inline-block align-text-top"> 
+                            <div class="text">
+                                  Vendor Management Systems <span class="cl-yellow"><br>Kinaya Interior</span>    
+                            </div>
+                        </div>
                     </div>
+
                     <div class="img-home mt-4">
                         <img src="{{ asset('frontend/assets/home kinaya.png') }}" alt="home" class="img-fluid">
                     </div>
@@ -80,10 +85,26 @@
                             <button type="button" class="btn btn-card-dark flex-grow-1 ms-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Register</button>
                         </div>
                         <div class="row mx-0 mt-4 menu">
-                            <div class="col-6 px-0">
+                            <div class="col-12 px-0">
+                                <a href="{{ route('home') }}" class="text-decoration-none">
+                                    <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/HeaderFinance-1/Vector.png"
+                                    alt="vector" class="me-3">Manual Book
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mx-0 menu">
+                            <div class="col-12 px-0">
                                 <a href="{{ route('testimoni') }}" class="text-decoration-none">
                                     <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/HeaderFinance-1/Vector.png"
                                     alt="vector" class="me-3">Testimoni Vendor
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mx-0  menu">
+                            <div class="col-12 px-0">
+                                <a href="{{ route('why-us') }}" class="text-decoration-none">
+                                    <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/HeaderFinance-1/Vector.png"
+                                    alt="vector" class="me-3">Tentang Kami
                                 </a>
                             </div>
                         </div>
@@ -98,6 +119,11 @@
                             </div>
                         </div>
 
+                        @if (Session('success'))
+                        <div class="alert alert-success">
+                            {{ Session('success') }}
+                        </div>
+                        @endif
                         <!-- Modal -->
                         <div class="modal fade" id="staticBackdrop2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
                             <div class="modal-dialog modal-xl">
@@ -107,7 +133,8 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body p-4">
-                                        <form>
+                                        <formid="form-vendor" action="{{ route('store') }}"  method="POST" enctype="multipart/form-data">
+                                        @csrf
                                             <div class="row">
                                                 <div class="col-md-4 border-end">
                                                     <h6 class="modal-subtitle mb-4">Info Perusahaan</h6>
@@ -128,60 +155,76 @@
                                                         </select>
 
                                                     </div>
-                                                    <!-- kategori perusahaan input -->
-                                                    <div class="form-outline mb-4">
-                                                        <select id="kategori_perusahaan" class="form-select" name="kategori_perusahaan" required>
-                                                            <optgroup label="Kategori Perusahaan">
-                                                                <option selected disabled hidden>Kategori Perusahaan</option>
-                                                                <option>Teknologi Informasi</option>
-                                                                <option>Manufaktur</option>
-                                                                <option>Jasa Keuangan</option>
-                                                                <option>Ritel</option>
-                                                                <option>Kesehatan</option>
-                                                                <option>Pendidikan</option>
-                                                                <option>Pariwisata</option>
-                                                                <option>Transportasi</option>
-                                                                <option>Agrikultur</option>
-                                                            </optgroup>
-                                                        </select>
-                                                    </div>
                                                     <!-- nama perusahaan input -->
                                                     <div class="form-outline mb-4">
-                                                        <input type="text" id="nama_perusahaan" class="form-control" placeholder="Nama Perusahaan"/>
+                                                        <input type="text" id="nama_perusahaan" class="form-control" placeholder="Nama Perusahaan" required/>
+                                                    </div>
+                                                    <!-- jumlah karyawan input -->
+                                                    <div class="form-outline mb-4">
+                                                        <input type="text" id="jumlah_karyawan" class="form-control" placeholder="Jumlah Karyawan" required/>
+                                                    </div>
+                                                    <!-- File Input -->
+                                                    <label for="basic-url" class="form-label">Kirim hasil jadi yang pernah dikerjakan</label>
+                                                    <div class="input-group mb-4">
+                                                        <input type="file" id="hasil_jadi" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                                                    </div>
+                                                    <label for="basic-url" class="form-label">kirim video Gudang Perusahaan</label>
+                                                    <div class="input-group mb-4">
+                                                        <input type="file" id="video_perusahaan" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                                                    </div>
+                                                    <label for="basic-url" class="form-label">Kirim katalog atau pricelist</label>
+                                                    <div class="input-group mb-4">
+                                                        <input type="file" id="file_katalog" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 border-end">
                                                     <h6 class="modal-subtitle mb-4">Info Kontak Perusahaan</h6>
                                                     <!--no telp perusahaan input -->
                                                     <div class="form-outline mb-4">
-                                                        <input type="text" id="no_telp_perusahaan" class="form-control" placeholder="No Telpon Perusahaan"/>
+                                                        <input type="text" id="no_telp_perusahaan" class="form-control" placeholder="No Telpon Perusahaan" required/>
                                                     </div>
                                                     <!-- email perusahaan input -->
                                                     <div class="form-outline mb-4">
-                                                        <input type="email" id="email_perusahaan" class="form-control" placeholder="Email Perusahaan"/>
+                                                        <input type="email" id="email_perusahaan" class="form-control" placeholder="Email Perusahaan" required/>
+                                                    </div>
+                                                    <!-- sosmed perusahaan input -->
+                                                    <div class="form-outline mb-4">
+                                                        <input type="text" id="sosmed_perusahaan" class="form-control" placeholder="Sosial Media Perusahaan"/>
                                                     </div>
                                                     <!-- alamat perusahaan input -->
                                                     <div class="form-outline mb-4">
-                                                        <textarea class="form-control" id="alamat_perusahaan" rows="3" placeholder="Alamat Perusahaan"></textarea>
+                                                        <textarea class="form-control" id="alamat_perusahaan" rows="3" placeholder="Alamat Perusahaan" required></textarea>
+                                                    </div>
+                                                    <!-- Kota pperusahaan -->
+                                                    <div class="form-outline mb-4">
+                                                        <input type="text" id="kota" name="kota" placeholder="Kota" class="form-control" id="inputKota" required>
+                                                    </div>
+                                                    <!-- provinsi -->
+                                                    <div class="form-outline mb-4">
+                                                        <input type="text" id="provinsi" name="provinsi" placeholder="Provinsi" class="form-control" id="inputProvinsi" required>
+                                                    </div>
+                                                    <!-- kode pos -->
+                                                    <div class="form-outline mb-4">
+                                                        <input type="text" id="kode_pos" name="kode_pos" class="form-control" placeholder="Kode pos" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <h6 class="modal-subtitle mb-4">Info PIC</h6>
                                                     <!-- Name PIC input -->
                                                     <div class="form-outline mb-4">
-                                                        <input type="text" id="name" class="form-control" placeholder="Nama"/>
+                                                        <input type="text" id="name" class="form-control" placeholder="Nama" required/>
                                                     </div>
                                                     <!-- no telp PIC input -->
                                                     <div class="form-outline mb-4">
-                                                        <input type="text" id="no_telp" class="form-control" placeholder="No Telpon"/>
+                                                        <input type="text" id="no_telp" class="form-control" placeholder="No Telpon" required/>
                                                     </div>
                                                     <!-- email PIC input -->
                                                     <div class="form-outline mb-4">
-                                                        <input type="email" id="email" class="form-control" placeholder="Email"/>
+                                                        <input type="email" id="email" class="form-control" placeholder="Email" required/>
                                                     </div>
                                                     <!-- Password PIC input -->
                                                     <div class="form-outline mb-4">
-                                                        <input type="password" id="password" class="form-control" placeholder="Password"/>
+                                                        <input type="password" id="password" class="form-control" placeholder="Password" required/>
                                                     </div>
                                                 </div>
                                             </div>

@@ -15,11 +15,18 @@ return new class extends Migration
             $table->id();
             $table->foreignId('users_id')->nullable()->index('fk_perusahaan_detail_to_users');
             $table->string('kategori_bidang_perusahaan');
-            $table->string('kategori_perusahaan');
             $table->string('nama_perusahaan');
+            $table->string('jumlah_karyawan');
+            $table->longText('hasil_jadi');
+            $table->longText('video_perusahaan');
+            $table->longText('file_katalog');
             $table->string('no_telp_perusahaan');
             $table->string('email_perusahaan');
-            $table->string('alamat_perusahaan');
+            $table->string('sosmed_perusahaan');
+            $table->text('alamat_perusahaan');
+            $table->string('kota');
+            $table->string('provinsi');
+            $table->string('kode_pos');
             $table->timestamps();
         });
     }

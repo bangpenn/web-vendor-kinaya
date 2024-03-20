@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('frontend.home');
-});
+})->name('home');
 
 Route::get('/testimoni', function () {
     return view('frontend.testimoni');
@@ -26,6 +27,9 @@ Route::get('/why-us', function () {
     return view('frontend.whyus');
 })->name('why-us');
 
+
+// Rute untuk memproses data formulir yang disubmit
+Route::post('/frontend/store', [DataController::class, 'store'])->name('store');
 
 
 Route::middleware([
