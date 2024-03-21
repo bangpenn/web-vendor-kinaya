@@ -19,7 +19,6 @@ class PerusahaanDetail extends Model
     protected $fillable = [
         'users_id',
         'kategori_bidang_perusahaan',
-        'kategori_perusahaan',
         'nama_perusahaan',
         'jumlah_karyawan',
         'hasil_jadi',
@@ -37,7 +36,7 @@ class PerusahaanDetail extends Model
 
 
     // One to one
-    public functiion user()
+    public function user()
     {
         return $this->belongsTo('App/Models/User', 'users_id', 'id');
     }

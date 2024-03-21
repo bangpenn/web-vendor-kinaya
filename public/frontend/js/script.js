@@ -24,4 +24,11 @@ $('.slider').slick({
     }
   ]
 });
+
+
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#staticBackdrop2").modal();
+  });
+});
 	

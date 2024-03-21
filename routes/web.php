@@ -29,7 +29,11 @@ Route::get('/why-us', function () {
 
 
 // Rute untuk memproses data formulir yang disubmit
+Route::get('home', [DataController::class, 'index']);
 Route::post('/frontend/store', [DataController::class, 'store'])->name('store');
+Route::get('form', [DataController::class, 'index'])->name('form');
+// Route::get('/frontend/store', [DataController::class, 'store'])->name('store');
+
 
 
 Route::middleware([
