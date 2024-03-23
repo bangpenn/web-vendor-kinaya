@@ -10,7 +10,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
 
-	<title>AdminTukuKlik</title>
+	<title>AdminKinaya</title>
 </head>
 <body>
 
