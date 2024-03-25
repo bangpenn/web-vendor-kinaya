@@ -164,7 +164,7 @@ body .abovefold .card {
 
 @media (max-width: 650px) {
     .four-point {
-        display: none !important; 
+        display: none !important;
     }
     .img-home {
       display: none !important;
@@ -199,8 +199,8 @@ body .abovefold .card .input-title {
 }
 
 .btn-card:hover {
-    background: #FFC62B; 
-    transform: translateY(-2px); 
+    background: #FFC62B;
+    transform: translateY(-2px);
 }
 
 .btn-card:active {
@@ -307,7 +307,7 @@ body .abovefold .card .menu:hover a {
         margin-bottom: 20px;
     }
 }
-  
+
 
 .slick-slide{
     transform: scale(0.8);
@@ -325,29 +325,29 @@ body .abovefold .card .menu:hover a {
 }
 
 /* Tampilan untuk layar kecil (misalnya, ponsel) */
-@media screen and (max-width: 576px) {
-    .slick-slide img {
+/* @media screen and (max-width: 576px) {
+    .slick-slide iframe {
         width: 300px;
         height: 200px;
         transition: all 0.4s ease-in-out;
     }
-}
+} */
 
 /* Tampilan untuk layar sedang (misalnya, tablet) */
-@media screen and (min-width: 577px) and (max-width: 992px) {
-    .slick-slide img {
-        width: 620px;
-        height: 465px;
+/* @media screen and (min-width: 577px) and (max-width: 992px) {
+    .slick-slide iframe {
+        width: 560px;
+        height: 315px;
         transition: all 0.4s ease-in-out;
     }
-}
+} */
 
 /* Tampilan untuk layar besar (misalnya, desktop) */
-@media screen and (min-width: 993px) {
-    .slick-slide img {
-        width: 620px;
-        height: 465px;
+/* @media screen and (min-width: 993px) {
+    .slick-slide iframe {
+        width: 560px;
+        height: 315px;
         transition: all 0.4s ease-in-out;
     }
-}
+} */
 

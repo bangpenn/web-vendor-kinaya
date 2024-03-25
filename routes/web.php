@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\VideoController;
 use App\Http\Controllers\Admin\VendorController;
 use App\Http\Controllers\Admin\DashboardController;
 
@@ -23,6 +24,10 @@ Route::get('/', function () {
 Route::get('/testimoni', function () {
     return view('frontend.testimoni');
 })->name('testimoni');
+
+// video youtubbe coontrolre
+Route::get('/video', 'VideoController@show')->name('video.show');
+
 
 
 Route::get('/why-us', function () {

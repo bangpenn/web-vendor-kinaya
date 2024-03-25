@@ -179,47 +179,42 @@
       <div class="text-center title-text">
         <h1 class="text-title">Kenapa bergabung dengan kami</h1>
         <p class="text-caption" style="margin-left: 3rem; margin-right: 3rem">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sit iusto doloribus, incidunt minus quos!
+            Bergabung dengan kami adalah langkah tepat untuk mewujudkan impian desain interior Anda. Kami berkomitmen untuk memberikan layanan terbaik, solusi kreatif, dan desain yang
+            inovatif. Mari bergabung dengan kami dan rasakan perbedaannya!
         </p>
       </div>
 
       <div class="grid-padding text-center">
         <div class="row">
-          <div class="col-lg-4 column">
-            <div class="icon">
-              <img src="{{ asset('frontend/assets/people.png') }}" 
-                alt="" />
+            <div class="col-lg-4 column">
+                <div class="icon">
+                    <img src="{{ asset('frontend/assets/people.png') }}" alt="" />
+                </div>
+                <h3 class="icon-title">Pelayanan Prima</h3>
+                <p class="icon-caption">
+                    Layanan terbaik untuk memastikan kepuasan pelanggan dan pertumbuhan bisnis yang cepat.
+                </p>
             </div>
-            <h3 class="icon-title">Lorem, ipsum dolor.</h3>
-            <p class="icon-caption">
-              This can easily help you to<br />
-              grow up your business fast
-            </p>
-          </div>
-          <div class="col-lg-4 column">
-            <div class="icon">
-              <img src="{{ asset('frontend/assets/money.png') }}" 
-                alt="" />
+            <div class="col-lg-4 column">
+                <div class="icon">
+                    <img src="{{ asset('frontend/assets/money.png') }}" alt="" />
+                </div>
+                <h3 class="icon-title">Solusi Kreatif</h3>
+                <p class="icon-caption">
+                    Dengan analisis real-time, pengguna dapat memantau data secara langsung dan mengambil keputusan yang tepat.
+                </p>
             </div>
-            <h3 class="icon-title">Lorem, ipsum dolor.</h3>
-            <p class="icon-caption">
-              With real-time analytics, you<br />
-              can check data in real time
-            </p>
-          </div>
-          <div class="col-lg-4 column">
-            <div class="icon">
-              <img src="{{ asset('frontend/assets/percaya.png') }}" 
-                alt="" />
+            <div class="col-lg-4 column">
+                <div class="icon">
+                    <img src="{{ asset('frontend/assets/percaya.png') }}" alt="" />
+                </div>
+                <h3 class="icon-title">Desain Inovatif</h3>
+                <p class="icon-caption">
+                    Desain yang inovatif akan memastikan kesan yang menarik dan memuaskan bagi pengguna.
+                </p>
             </div>
-            <h3 class="icon-title">Lorem, ipsum dolor.</h3>
-            <p class="icon-caption">
-              With real-time analytics, we<br />
-              will guarantee your data
-            </p>
-          </div>
         </div>
-      </div>
+    </div>
 
       <div class="card-block">
         <div class="card">
@@ -247,7 +242,7 @@
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
 
 
