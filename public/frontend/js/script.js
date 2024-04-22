@@ -1,27 +1,25 @@
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+});
+// Mengontrol navigasi menggunakan tombol-tombol kustom
+$('.owl-prev').click(function() {
+$('.owl-carousel').trigger('prev.owl.carousel');
+});
 
-// $('.slider').slick({
-//   centerMode: true,
-//   centerPadding: '60px',
-//   slidesToShow: 3,
-//   responsive: [
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         arrows: true,
-//         centerMode: true,
-//         centerPadding: '40px',
-//         slidesToShow: 1
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         arrows: true,
-//         centerMode: true,
-//         centerPadding: '40px',
-//         slidesToShow: 1
-//       }
-//     }
-//   ]
-// });
-
+$('.owl-next').click(function() {
+$('.owl-carousel').trigger('next.owl.carousel');
+});

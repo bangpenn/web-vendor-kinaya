@@ -17,8 +17,11 @@ use App\Http\Controllers\Admin\DashboardController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('frontend.home');
+// })->name('home');
 Route::get('/', function () {
-    return view('frontend.home');
+    return view('frontend.home2');
 })->name('home');
 
 Route::get('/testimoni', function () {

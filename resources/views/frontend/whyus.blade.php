@@ -179,8 +179,7 @@
       <div class="text-center title-text">
         <h1 class="text-title">Kenapa bergabung dengan kami</h1>
         <p class="text-caption" style="margin-left: 3rem; margin-right: 3rem">
-            Bergabung dengan kami adalah langkah tepat untuk mewujudkan impian desain interior Anda. Kami berkomitmen untuk memberikan layanan terbaik, solusi kreatif, dan desain yang
-            inovatif. Mari bergabung dengan kami dan rasakan perbedaannya!
+            Bergabung dengan kami sebagai vendor atau mitra kerja sama adalah keputusan yang tepat untuk mewujudkan visi dan misi bisnis Anda. Kami berkomitmen untuk menyediakan platform yang mendukung kolaborasi yang kuat dan saling menguntungkan. Dengan bergabung bersama kami, Anda akan merasakan beberapa manfaat berikut:
         </p>
       </div>
 
@@ -190,27 +189,27 @@
                 <div class="icon">
                     <img src="{{ asset('frontend/assets/people.png') }}" alt="" />
                 </div>
-                <h3 class="icon-title">Pelayanan Prima</h3>
+                <h3 class="icon-title">Dukungan Tim Profesional</h3>
                 <p class="icon-caption">
-                    Layanan terbaik untuk memastikan kepuasan pelanggan dan pertumbuhan bisnis yang cepat.
+                    Tim kami terdiri dari profesional berpengalaman yang siap membantu dan mendukung Anda dalam mencapai tujuan bisnis Anda.
                 </p>
             </div>
             <div class="col-lg-4 column">
                 <div class="icon">
                     <img src="{{ asset('frontend/assets/money.png') }}" alt="" />
                 </div>
-                <h3 class="icon-title">Solusi Kreatif</h3>
+                <h3 class="icon-title">Jaringan Luas</h3>
                 <p class="icon-caption">
-                    Dengan analisis real-time, pengguna dapat memantau data secara langsung dan mengambil keputusan yang tepat.
+                    Dengan bergabung bersama kami, Anda akan memiliki kesempatan untuk memperluas jaringan Anda dan menjalin kemitraan yang berharga dengan para pemangku kepentingan bisnis lainnya.
                 </p>
             </div>
             <div class="col-lg-4 column">
                 <div class="icon">
                     <img src="{{ asset('frontend/assets/percaya.png') }}" alt="" />
                 </div>
-                <h3 class="icon-title">Desain Inovatif</h3>
+                <h3 class="icon-title">Layanan Terbaik</h3>
                 <p class="icon-caption">
-                    Desain yang inovatif akan memastikan kesan yang menarik dan memuaskan bagi pengguna.
+                    Kami berkomitmen untuk memberikan layanan terbaik kepada para mitra kerja sama kami. Dari awal hingga akhir, kami akan bekerja sama dengan Anda untuk memastikan kebutuhan dan harapan Anda terpenuhi dengan baik.
                 </p>
             </div>
         </div>
@@ -226,17 +225,16 @@
             </div>
             <div class="flex-grow-1 text-lg-start text-center card-text">
               <h3 class="card-title">
-                Fast Business Management in 30 minutes
+                Mari bergabung dengan kami dan rasakan perbedaannya!
               </h3>
               <p class="card-caption">
-                Our tools for business analysis helps an organization
-                understand<br class="d-none d-lg-block" />
-                market or business development.
+                Bersama-sama, kita dapat mencapai kesuksesan yang luar biasa <br class="d-none d-lg-block" />
+                 dalam bisnis dan menciptakan hasil yang luar biasa untuk pelanggan kita.
               </p>
             </div>
             <div class="card-btn-space">
-              <button class="btn btn-card text-white">Buy Now</button>
-              <button class="btn btn-outline">Demo Version</button>
+              <button class="btn btn-card text-white">Daftar</button>
+              <button class="btn btn-outline">Video Company Profile</button>
             </div>
           </div>
         </div>
