@@ -221,7 +221,7 @@
                   <div class="modal-header border-0" style="padding: 2rem; padding-bottom: 0">
                     <a class="modal-title" id="targetModalLabel">
                       <img style="margin-top: 0.5rem; height: 37px; width: 50px;"
-                        src="img/logo kinaya.png"
+                        src="{{ asset('frontend/assets/logo kinaya.png') }}"
                         alt="" />
                     </a>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -229,7 +229,7 @@
                   <div class="modal-body" style="padding: 2rem; padding-top: 0; padding-bottom: 0">
                     <ul class="navbar-nav responsive me-auto mt-2 mt-lg-0 mx-auto"> <!-- mx-auto untuk menengahkan -->
                       <li class="nav-item active">
-                        <a class="nav-link" href="{{ route('home2') }}" onclick="activateNavItem(this)">Manual Book</a>
+                        <a class="nav-link" href="" onclick="activateNavItem(this)">Manual Book</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="{{ route('testimoni') }}" onclick="activateNavItem(this)">Testimoni</a>
@@ -246,7 +246,7 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo">
               <ul class="navbar-nav me-auto mt-2 mt-lg-0 mx-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{{ route('home2') }}" onclick="activateNavItem(this)">Manual Book</a>
+                  <a class="nav-link" href="" onclick="activateNavItem(this)">Manual Book</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('testimoni') }}" onclick="activateNavItem(this)">Testimoni</a>
@@ -286,17 +286,33 @@
               <button class="btn d-inline-flex mb-md-0 btn-try text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
                 Register
               </button>
-              <button class="btn btn-outline">
+              <button type="button" class="btn btn-outline" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/T2Mawloembg?si=7kBwlY566MevBO8x" data-bs-target="#myModal" aria-label="Watch video Company Profile">
                 <div class="d-flex align-items-center">
-                  <svg class="me-2" width="13" height="12" viewBox="0 0 13 13" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.9293 7.99988L6.66668 5.15788V10.8419L10.9293 7.99988ZM12.9173 8.27722L5.85134 12.9879C5.80115 13.0213 5.74283 13.0404 5.6826 13.0433C5.62238 13.0462 5.5625 13.0327 5.50934 13.0042C5.45619 12.9758 5.41175 12.9334 5.38075 12.8817C5.34976 12.83 5.33337 12.7708 5.33334 12.7105V3.28922C5.33337 3.22892 5.34976 3.16976 5.38075 3.11804C5.41175 3.06633 5.45619 3.02398 5.50934 2.99552C5.5625 2.96706 5.62238 2.95355 5.6826 2.95644C5.74283 2.95932 5.80115 2.97848 5.85134 3.01188L12.9173 7.72255C12.963 7.75299 13.0004 7.79423 13.0263 7.84261C13.0522 7.89099 13.0658 7.94501 13.0658 7.99988C13.0658 8.05475 13.0522 8.10878 13.0263 8.15716C13.0004 8.20553 12.963 8.24678 12.9173 8.27722Z"
-                      fill="#555B61" />
-                  </svg>
-                  Watch video Company Profile
+                    <svg class="me-2" width="13" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9293 7.99988L6.66668 5.15788V10.8419L10.9293 7.99988ZM12.9173 8.27722L5.85134 12.9879C5.80115 13.0213 5.74283 13.0404 5.6826 13.0433C5.62238 13.0462 5.5625 13.0327 5.50934 13.0042C5.45619 12.9758 5.41175 12.9334 5.38075 12.8817C5.34976 12.83 5.33337 12.7708 5.33334 12.7105V3.28922C5.33337 3.22892 5.34976 3.16976 5.38075 3.11804C5.41175 3.06633 5.45619 3.02398 5.50934 2.99552C5.5625 2.96706 5.62238 2.95355 5.6826 2.95644C5.74283 2.95932 5.80115 2.97848 5.85134 3.01188L12.9173 7.72255C12.963 7.75299 13.0004 7.79423 13.0263 7.84261C13.0522 7.89099 13.0658 7.94501 13.0658 7.99988C13.0658 8.05475 13.0522 8.10878 13.0263 8.15716C13.0004 8.20553 12.963 8.24678 12.9173 8.27722Z" fill="#555B61" />
+                    </svg>
+                    Watch video Company Profile
                 </div>
-              </button>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Video Company Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                      <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/T2Mawloembg?si=7kBwlY566MevBO8x" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
             </div>
           </div>
           <!-- Right Column -->
